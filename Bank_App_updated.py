@@ -664,7 +664,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.con_entry_Password.configure(selectforeground="white")
 
         self.Confirm = tk.Button(self.Registration_frame, command=lambda: self.userreg_thread(None))
-        self.Confirm.place(relx=0.203, rely=0.82, height=24, width=177)
+        self.Confirm.place(relx=0.1, rely=0.82, height=24, width=80)
         self.Confirm.configure(activebackground="#ececec")
         self.Confirm.configure(activeforeground="#000000")
         self.Confirm.configure(background="#808040")
@@ -676,6 +676,20 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Confirm.configure(highlightcolor="black")
         self.Confirm.configure(pady="0")
         self.Confirm.configure(text='''Confirm...''')
+
+        self.Back_reg = tk.Button(self.Registration_frame, command=lambda:self.show_frame(self.Home_Page))
+        self.Back_reg.place(relx=0.4, rely=0.82, height=24, width=80)
+        self.Back_reg.configure(activebackground="#ececec")
+        self.Back_reg.configure(activeforeground="#000000")
+        self.Back_reg.configure(background="#804040")
+        self.Back_reg.configure(cursor="arrow")
+        self.Back_reg.configure(disabledforeground="#a3a3a3")
+        self.Back_reg.configure(font="-family {Segoe UI} -size 10 -weight bold")
+        self.Back_reg.configure(foreground="#ffffff")
+        self.Back_reg.configure(highlightbackground="#d9d9d9")
+        self.Back_reg.configure(highlightcolor="black")
+        self.Back_reg.configure(pady="0")
+        self.Back_reg.configure(text='''Back''')
 
         self.Advice = tk.Label(self.Registration_frame)
         self.Advice.place(relx=0.087, rely=0.89, height=44, width=300)
@@ -1826,7 +1840,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.AIRTIME_RECHARGE.configure(text='''AIRTIME RECHARGE''')
 
         self.vendor = tk.Label(self.Airtime)
-        self.vendor.place(relx=0.058, rely=0.326, height=21, width=54)
+        self.vendor.place(relx=0.058, rely=0.166, height=21, width=54)
         self.vendor.configure(activebackground="#f9f9f9")
         self.vendor.configure(activeforeground="black")
         self.vendor.configure(background="#d9d9d9")
@@ -1839,14 +1853,14 @@ The bank will not be held liable for whatsoever issues that might occur as a res
 
         v = tk.StringVar()
         self.vendor_TCombobox2 = ttk.Combobox(self.Airtime)
-        self.vendor_TCombobox2.place(relx=0.406, rely=0.326, relheight=0.053
+        self.vendor_TCombobox2.place(relx=0.406, rely=0.166, relheight=0.053
                                      , relwidth=0.241)
         self.vendor_TCombobox2.configure(textvariable=v)
         self.vendor_TCombobox2.configure(takefocus="")
         self.vendor_TCombobox2['values'] = ('MTN', 'Airtel', 'Glo', '9mobile')
 
         self.Phone_no = tk.Label(self.Airtime)
-        self.Phone_no.place(relx=0.058, rely=0.526, height=21, width=54)
+        self.Phone_no.place(relx=0.058, rely=0.310, height=21, width=54)
         self.Phone_no.configure(activebackground="#f9f9f9")
         self.Phone_no.configure(activeforeground="black")
         self.Phone_no.configure(background="#d9d9d9")
@@ -1858,7 +1872,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Phone_no.configure(text='''Phone''')
 
         self.Amount_air = tk.Label(self.Airtime)
-        self.Amount_air.place(relx=0.058, rely=0.426, height=21, width=54)
+        self.Amount_air.place(relx=0.058, rely=0.454, height=21, width=54)
         self.Amount_air.configure(activebackground="#f9f9f9")
         self.Amount_air.configure(activeforeground="black")
         self.Amount_air.configure(background="#d9d9d9")
@@ -1870,7 +1884,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Amount_air.configure(text='''Amount''')
 
         self.narration_air_Label1 = tk.Label(self.Airtime)
-        self.narration_air_Label1.place(relx=0.058, rely=0.652, height=21, width=64)
+        self.narration_air_Label1.place(relx=0.058, rely=0.598, height=21, width=64)
         self.narration_air_Label1.configure(activebackground="#f9f9f9")
         self.narration_air_Label1.configure(activeforeground="black")
         self.narration_air_Label1.configure(background="#d9d9d9")
@@ -1882,7 +1896,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.narration_air_Label1.configure(text='''Narration''')
 
         self.pin_air_Label2 = tk.Label(self.Airtime)
-        self.pin_air_Label2.place(relx=0.058, rely=0.752, height=21, width=34)
+        self.pin_air_Label2.place(relx=0.058, rely=0.742, height=21, width=34)
         self.pin_air_Label2.configure(activebackground="#f9f9f9")
         self.pin_air_Label2.configure(activeforeground="black")
         self.pin_air_Label2.configure(background="#d9d9d9")
@@ -1920,7 +1934,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.back_airtime_Button2.configure(text='''Back''')
 
         self.narration_air_Entry6 = tk.Entry(self.Airtime)
-        self.narration_air_Entry6.place(relx=0.406, rely=0.652, height=20, relwidth=0.243, width=60)
+        self.narration_air_Entry6.place(relx=0.406, rely=0.598, height=20, relwidth=0.243, width=60)
         self.narration_air_Entry6.configure(background="white")
         self.narration_air_Entry6.configure(disabledforeground="#a3a3a3")
         self.narration_air_Entry6.configure(font="TkFixedFont")
@@ -1932,7 +1946,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.narration_air_Entry6.configure(selectforeground="white")
 
         self.Airtime_Phone = tk.Entry(self.Airtime)
-        self.Airtime_Phone.place(relx=0.406, rely=0.526, height=20, relwidth=0.243, width=60)
+        self.Airtime_Phone.place(relx=0.406, rely=0.310, height=20, relwidth=0.243, width=60)
         self.Airtime_Phone.configure(background="white")
         self.Airtime_Phone.configure(disabledforeground="#a3a3a3")
         self.Airtime_Phone.configure(font="TkFixedFont")
@@ -1944,7 +1958,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Airtime_Phone.configure(selectforeground="white")
 
         self.pin_air_Entry8 = tk.Entry(self.Airtime, show="*")
-        self.pin_air_Entry8.place(relx=0.406, rely=0.752, height=20, relwidth=0.243, width=60)
+        self.pin_air_Entry8.place(relx=0.406, rely=0.742, height=20, relwidth=0.243, width=60)
         self.pin_air_Entry8.configure(background="white")
         self.pin_air_Entry8.configure(disabledforeground="#a3a3a3")
         self.pin_air_Entry8.configure(font="TkFixedFont")
@@ -1967,7 +1981,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Airtime_logo.configure(text='''Label''')
 
         self.Airtime_Amount = tk.Entry(self.Airtime)
-        self.Airtime_Amount.place(relx=0.406, rely=0.426, height=20
+        self.Airtime_Amount.place(relx=0.406, rely=0.454, height=20
                                   , relwidth=0.243, width=60)
         self.Airtime_Amount.configure(background="white")
         self.Airtime_Amount.configure(disabledforeground="#a3a3a3")
@@ -3650,6 +3664,8 @@ The bank will not be held liable for whatsoever issues that might occur as a res
     def quicktransfer_method(self):
         submitOk = True
         accountno = self.quickaccnoEntry1.get()
+        intaccountno=int(accountno)
+        print(intaccountno)
         beneficiary = self.quickbentEntry2.get()
         print(f'beneficiary is {beneficiary}')
         int_beneficiary = int(beneficiary)
@@ -3663,6 +3679,19 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         dt_string = now.strftime("%d/%m/%Y %H:%M:%S")
         cred_narr = narration + " credit amount:" + amount + " " + "on " + dt_string + "."
         narration = narration + " amount:" + amount + " " + "on " + dt_string + "."
+
+        self.cursor.execute("SELECT accountno from azbank_empusers")
+        item = self.cursor.fetchall()
+        tent = []
+        tentlist = []
+        for i in item:
+            thing = list(i)
+            tent += thing
+        for j in tent:
+            possess = int(j)
+            tentlist.append(possess)
+        print("tentlist is")
+        print(tentlist)
 
         amount_pattern = '^[+-]?((\d+(\.\d+)?)|(\.\d+))$'
         amount_result = re.match(amount_pattern, amount)
@@ -3691,6 +3720,10 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         if not accountnum_result:
             submitOk = False
             messagebox.showerror("Error", "Invalid account number!")
+
+        if intaccountno not in tentlist or int_beneficiary not in tentlist:
+            messagebox.showerror("Error", "Invalid account number or beneficiary!")
+            submitOk=False
 
         if submitOk is False:
             return False
@@ -3765,6 +3798,17 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         cred_narr = narration + " credit amount:" + amount + " " + "on " + dt_string + "."
         narration = narration + " amount:" + amount + " " + "on " + dt_string + "."
 
+        self.cursor.execute("SELECT accountno from azbank_empusers")
+        item=self.cursor.fetchall()
+        tent=[]
+        tentlist=[]
+        for i in item:
+            thing=list(i)
+            tent+=thing
+        for j in tent:
+            possess=int(j)
+            tentlist.append(possess)
+        print(tentlist)
         amount_pattern = '^[+-]?((\d+(\.\d+)?)|(\.\d+))$'
         amount_result = re.match(amount_pattern, amount)
         if not amount_result:
@@ -3786,7 +3830,12 @@ The bank will not be held liable for whatsoever issues that might occur as a res
             submitOk = False
             messagebox.showerror("Error", "Invalid account number!")
 
+        if int_beneficiary not in tentlist:
+            messagebox.showerror("Error", "Invalid beneficiary!")
+            submitOk=False
+
         if submitOk is False:
+            messagebox.showerror("Error", "Invalid response!")
             return False
         else:
             message = [test, int_beneficiary, float_amount, pin, "transfer"]

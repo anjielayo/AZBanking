@@ -1166,7 +1166,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Next_kin_entry.configure(selectforeground="white")
 
         self.Gender = tk.Label(self.Account_creation)
-        self.Gender.place(relx=0.055, rely=0.68, height=21, width=70)
+        self.Gender.place(relx=0.055, rely=0.683, height=21, width=70)
         self.Gender.configure(activebackground="#f9f9f9")
         self.Gender.configure(activeforeground="black")
         self.Gender.configure(background="#d9d9d9")
@@ -1206,7 +1206,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Female.configure(variable=self.var, value="female")
 
         self.Marital_Status = tk.Label(self.Account_creation)
-        self.Marital_Status.place(relx=0.055, rely=0.74, height=21, width=70)
+        self.Marital_Status.place(relx=0.055, rely=0.76, height=21, width=70)
         self.Marital_Status.configure(background="#d9d9d9")
         self.Marital_Status.configure(disabledforeground="#a3a3a3")
         self.Marital_Status.configure(foreground="#000000")
@@ -3191,7 +3191,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.back_update_pin_1.configure(highlightcolor="black")
         self.back_update_pin_1.configure(pady="0")
         self.back_update_pin_1.configure(text='''Back''')
-        self.show_frame(self.Welcome_Page)
+        self.show_frame(self.Account_creation)
 
     # ----------------------RAISE FRAME METHOD-------------------------------#
     def show_frame(self, content):

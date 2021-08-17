@@ -1026,7 +1026,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         # self.Acc_Cus_ID.configure(text='''Customer ID''')
 
         self.Acc_Fname = tk.Label(self.Account_creation)
-        self.Acc_Fname.place(relx=0.055, rely=0.235, height=21, width=70)
+        self.Acc_Fname.place(relx=0.055, rely=0.2, height=21, width=70)
         self.Acc_Fname.configure(background="#d9d9d9")
         self.Acc_Fname.configure(disabledforeground="#a3a3a3")
         self.Acc_Fname.configure(foreground="#000000")
@@ -1041,7 +1041,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         # self.Customer_ID.configure(insertbackground="black")
 
         self.Acc_Lname = tk.Label(self.Account_creation)
-        self.Acc_Lname.place(relx=0.055, rely=0.329, height=21, width=70)
+        self.Acc_Lname.place(relx=0.055, rely=0.3, height=21, width=70)
         self.Acc_Lname.configure(background="#d9d9d9")
         self.Acc_Lname.configure(disabledforeground="#a3a3a3")
         self.Acc_Lname.configure(foreground="#000000")
@@ -1062,7 +1062,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         # self.Acc_BVN.configure(text='''BVN''')
 
         self.First_name = tk.Entry(self.Account_creation)
-        self.First_name.place(relx=0.339, rely=0.235, height=20, relwidth=0.504)
+        self.First_name.place(relx=0.339, rely=0.2, height=20, relwidth=0.504)
         self.First_name.configure(background="white")
         self.First_name.configure(disabledforeground="#a3a3a3")
         self.First_name.configure(font="TkFixedFont")
@@ -1070,7 +1070,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.First_name.configure(insertbackground="black")
 
         self.Last_name = tk.Entry(self.Account_creation)
-        self.Last_name.place(relx=0.339, rely=0.329, height=20, relwidth=0.504)
+        self.Last_name.place(relx=0.339, rely=0.3, height=20, relwidth=0.504)
         self.Last_name.configure(background="white")
         self.Last_name.configure(disabledforeground="#a3a3a3")
         self.Last_name.configure(font="TkFixedFont")
@@ -1095,7 +1095,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         # self.Acc_BVN.configure(insertbackground="black")
 
         self.Address_Aname = tk.Label(self.Account_creation)
-        self.Address_Aname.place(relx=0.055, rely=0.424, height=21, width=70)
+        self.Address_Aname.place(relx=0.055, rely=0.4, height=21, width=70)
         self.Address_Aname.configure(activebackground="#f9f9f9")
         self.Address_Aname.configure(activeforeground="black")
         self.Address_Aname.configure(background="#d9d9d9")
@@ -1106,7 +1106,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Address_Aname.configure(text='''Address''')
 
         self.Address = tk.Entry(self.Account_creation)
-        self.Address.place(relx=0.339, rely=0.424, height=20
+        self.Address.place(relx=0.339, rely=0.4, height=20
                            , relwidth=0.504)
         self.Address.configure(background="white")
         self.Address.configure(disabledforeground="#a3a3a3")
@@ -1119,7 +1119,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Address.configure(selectforeground="white")
 
         self.Age = tk.Label(self.Account_creation)
-        self.Age.place(relx=0.055, rely=0.518, height=21, width=70)
+        self.Age.place(relx=0.055, rely=0.5, height=21, width=70)
         self.Age.configure(activebackground="#f9f9f9")
         self.Age.configure(activeforeground="black")
         self.Age.configure(background="#d9d9d9")
@@ -1130,7 +1130,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Age.configure(text='''Age''')
 
         self.Age_entry = tk.Entry(self.Account_creation)
-        self.Age_entry.place(relx=0.339, rely=0.518, height=20, relwidth=0.504)
+        self.Age_entry.place(relx=0.339, rely=0.5, height=20, relwidth=0.504)
         self.Age_entry.configure(background="white")
         self.Age_entry.configure(disabledforeground="#a3a3a3")
         self.Age_entry.configure(font="TkFixedFont")
@@ -1142,7 +1142,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Age_entry.configure(selectforeground="white")
 
         self.Next_kin = tk.Label(self.Account_creation)
-        self.Next_kin.place(relx=0.055, rely=0.612, height=21, width=70)
+        self.Next_kin.place(relx=0.055, rely=0.6, height=21, width=70)
         self.Next_kin.configure(activebackground="#f9f9f9")
         self.Next_kin.configure(activeforeground="black")
         self.Next_kin.configure(background="#d9d9d9")
@@ -1153,7 +1153,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Next_kin.configure(text='''Next of Kin''')
 
         self.Next_kin_entry = tk.Entry(self.Account_creation)
-        self.Next_kin_entry.place(relx=0.339, rely=0.612, height=20
+        self.Next_kin_entry.place(relx=0.339, rely=0.6, height=20
                                   , relwidth=0.504)
         self.Next_kin_entry.configure(background="white")
         self.Next_kin_entry.configure(disabledforeground="#a3a3a3")
@@ -1166,7 +1166,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Next_kin_entry.configure(selectforeground="white")
 
         self.Gender = tk.Label(self.Account_creation)
-        self.Gender.place(relx=0.055, rely=0.706, height=21, width=70)
+        self.Gender.place(relx=0.055, rely=0.68, height=21, width=70)
         self.Gender.configure(activebackground="#f9f9f9")
         self.Gender.configure(activeforeground="black")
         self.Gender.configure(background="#d9d9d9")
@@ -1178,7 +1178,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
 
         self.var = tk.StringVar()
         self.Male = tk.Radiobutton(self.Account_creation)
-        self.Male.place(relx=0.319, rely=0.706, relheight=0.059, relwidth=0.168)
+        self.Male.place(relx=0.319, rely=0.68, relheight=0.059, relwidth=0.168)
         self.Male.configure(activebackground="#ececec")
         self.Male.configure(activeforeground="#000000")
         self.Male.configure(background="#d9d9d9")
@@ -1192,7 +1192,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Male.select()
 
         self.Female = tk.Radiobutton(self.Account_creation)
-        self.Female.place(relx=0.58, rely=0.706, relheight=0.059, relwidth=0.168)
+        self.Female.place(relx=0.58, rely=0.68, relheight=0.059, relwidth=0.168)
 
         self.Female.configure(activebackground="#ececec")
         self.Female.configure(activeforeground="#000000")
@@ -1206,7 +1206,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Female.configure(variable=self.var, value="female")
 
         self.Marital_Status = tk.Label(self.Account_creation)
-        self.Marital_Status.place(relx=0.055, rely=0.8, height=21, width=70)
+        self.Marital_Status.place(relx=0.055, rely=0.74, height=21, width=70)
         self.Marital_Status.configure(background="#d9d9d9")
         self.Marital_Status.configure(disabledforeground="#a3a3a3")
         self.Marital_Status.configure(foreground="#000000")
@@ -1214,7 +1214,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
 
         self.var2 = tk.StringVar()
         self.Single = tk.Radiobutton(self.Account_creation)
-        self.Single.place(relx=0.319, rely=0.8, relheight=0.059, relwidth=0.197)
+        self.Single.place(relx=0.319, rely=0.74, relheight=0.059, relwidth=0.197)
         self.Single.configure(activebackground="#ececec")
         self.Single.configure(activeforeground="#000000")
         self.Single.configure(background="#d9d9d9")
@@ -1228,7 +1228,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Single.select()
 
         self.Married = tk.Radiobutton(self.Account_creation)
-        self.Married.place(relx=0.58, rely=0.8, relheight=0.059, relwidth=0.168)
+        self.Married.place(relx=0.58, rely=0.74, relheight=0.059, relwidth=0.168)
         self.Married.configure(activebackground="#ececec")
         self.Married.configure(activeforeground="#000000")
         self.Married.configure(background="#d9d9d9")
@@ -1241,7 +1241,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Married.configure(variable=self.var2, value="married")
 
         self.widowed = tk.Radiobutton(self.Account_creation)
-        self.widowed.place(relx=0.58, rely=0.847, relheight=0.059
+        self.widowed.place(relx=0.58, rely=0.79, relheight=0.059
                            , relwidth=0.197)
         self.widowed.configure(activebackground="#ececec")
         self.widowed.configure(activeforeground="#000000")
@@ -1255,7 +1255,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.widowed.configure(variable=self.var2, value="widowed")
 
         self.Divorced = tk.Radiobutton(self.Account_creation)
-        self.Divorced.place(relx=0.34, rely=0.847, relheight=0.059
+        self.Divorced.place(relx=0.34, rely=0.79, relheight=0.059
                             , relwidth=0.197)
         self.Divorced.configure(activebackground="#ececec")
         self.Divorced.configure(activeforeground="#000000")
@@ -1267,6 +1267,46 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Divorced.configure(justify='left')
         self.Divorced.configure(text='''Divorced''')
         self.Divorced.configure(variable=self.var2, value="divorced")
+
+        self.acctype = tk.Label(self.Account_creation)
+        self.acctype.place(relx=0.055, rely=0.85, height=21, width=73)
+        self.acctype.configure(activebackground="#f9f9f9")
+        self.acctype.configure(activeforeground="black")
+        self.acctype.configure(background="#d9d9d9")
+        self.acctype.configure(disabledforeground="#a3a3a3")
+        self.acctype.configure(foreground="#000000")
+        self.acctype.configure(highlightbackground="#d9d9d9")
+        self.acctype.configure(highlightcolor="black")
+        self.acctype.configure(text='''Account Type''')
+
+        self.accvar = tk.StringVar()
+        self.current = tk.Radiobutton(self.Account_creation)
+        self.current.place(relx=0.34, rely=0.85, relheight=0.059, relwidth=0.168)
+        self.current.configure(activebackground="#ececec")
+        self.current.configure(activeforeground="#000000")
+        self.current.configure(background="#d9d9d9")
+        self.current.configure(disabledforeground="#a3a3a3")
+        self.current.configure(foreground="#000000")
+        self.current.configure(highlightbackground="#d9d9d9")
+        self.current.configure(highlightcolor="black")
+        self.current.configure(justify='left')
+        self.current.configure(text='''Current''')
+        self.current.configure(variable=self.accvar, value="current")
+        self.current.select()
+
+        self.savings = tk.Radiobutton(self.Account_creation)
+        self.savings.place(relx=0.58, rely=0.85, relheight=0.059, relwidth=0.168)
+
+        self.savings.configure(activebackground="#ececec")
+        self.savings.configure(activeforeground="#000000")
+        self.savings.configure(background="#d9d9d9")
+        self.savings.configure(disabledforeground="#a3a3a3")
+        self.savings.configure(foreground="#000000")
+        self.savings.configure(highlightbackground="#d9d9d9")
+        self.savings.configure(highlightcolor="black")
+        self.savings.configure(justify='left')
+        self.savings.configure(text='''Savings''')
+        self.savings.configure(variable=self.accvar, value="savings")
 
         self.Acc_create_save = tk.Button(self.Account_creation, command=lambda: self.staffreg_thread(None))
         self.Acc_create_save.place(relx=0.338, rely=0.918, height=24, width=67)
@@ -3064,7 +3104,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.update_pin.configure(background="#d9d9d9")
 
         self.update_pin_logo_Label1 = tk.Label(self.update_pin)
-        self.update_pin_logo_Label1.place(relx=0.1, rely=0.024, height=51, width=104)
+        self.update_pin_logo_Label1.place(relx=0.01, rely=0.024, height=51, width=104)
         self.update_pin_logo_Label1.configure(background="#d9d9d9")
         self.update_pin_logo_Label1.configure(disabledforeground="#a3a3a3")
         self.update_pin_logo_Label1.configure(foreground="#000000")
@@ -3076,7 +3116,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
 
         self.update_pin_heading_Label1 = tk.Label(self.update_pin)
         self.update_pin_heading_Label1.place(relx=0.319, rely=0.047, height=31
-                                             , width=214)
+                                             , width=190)
         self.update_pin_heading_Label1.configure(background="#d9d9d9")
         self.update_pin_heading_Label1.configure(disabledforeground="#a3a3a3")
         self.update_pin_heading_Label1.configure(font="-family {Verdana} -size 13 -weight bold")
@@ -3217,6 +3257,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         print(marital_status)
         next_of_kin = self.Next_kin_entry.get()
         address = self.Address.get()
+        acc_type=self.accvar.get()
         # accno = self.Acc_Aname.get()
         # bvn = self.Acc_BVN.get()
         # amt = self.Amount.get()
@@ -3271,8 +3312,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
                 pass
 
             message = [custid, fname, lname, fname + lname, newaccno, newbvn, newage, gender, marital_status,
-                       next_of_kin, address, '0000',
-                       50000, "empreg"]
+                       next_of_kin, address, acc_type,50000, "empreg"]
             print("The message")
             print(message)
             self.s.send(str.encode(json.dumps(message)))

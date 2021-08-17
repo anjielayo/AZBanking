@@ -48,7 +48,7 @@ class processServer(threading.Thread):
                 # print("The message")
                 print(message)
                 self.cursor.execute(
-                    "INSERT INTO azbank_empusers(customer_id,firstname,lastname,accountname,accountno,bvn,age,gender,marital_status,next_of_kin,address,password,amount) VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(
+                    "INSERT INTO azbank_empusers(customer_id,firstname,lastname,accountname,accountno,bvn,age,gender,marital_status,next_of_kin,address,account_type,amount) VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}')".format(
                         *message))
                 self.cursor.execute("SELECT * from azbank_empusers ORDER BY id DESC LIMIT 1")
                 resp = self.cursor.fetchall()

@@ -3191,7 +3191,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.back_update_pin_1.configure(highlightcolor="black")
         self.back_update_pin_1.configure(pady="0")
         self.back_update_pin_1.configure(text='''Back''')
-        self.show_frame(self.Account_creation)
+        self.show_frame(self.Welcome_Page)
 
     # ----------------------RAISE FRAME METHOD-------------------------------#
     def show_frame(self, content):

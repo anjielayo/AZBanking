@@ -124,7 +124,7 @@ class Az_Bank:
         self.Welcome_Page.configure(highlightcolor="black")
 
         self.Label1_home = tk.Label(self.Welcome_Page)
-        self.Label1_home.place(relx=-0.01, rely=-0.01, height=426, width=345)
+        self.Label1_home.place(relx=-0.01, rely=-0.01, relheight=1.1, relwidth=1.1)
         self.Label1_home.configure(activebackground="#f9f9f9")
         self.Label1_home.configure(activeforeground="black")
         self.Label1_home.configure(background="#d9d9d9")
@@ -677,7 +677,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Confirm.configure(pady="0")
         self.Confirm.configure(text='''Confirm...''')
 
-        self.Back_reg = tk.Button(self.Registration_frame, command=lambda:self.show_frame(self.Home_Page))
+        self.Back_reg = tk.Button(self.Registration_frame, command=lambda: self.show_frame(self.Home_Page))
         self.Back_reg.place(relx=0.4, rely=0.82, height=24, width=80)
         self.Back_reg.configure(activebackground="#ececec")
         self.Back_reg.configure(activeforeground="#000000")
@@ -2004,7 +2004,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Welcome_Reg.configure(disabledforeground="#a3a3a3")
         self.Welcome_Reg.configure(font="-family {Verdana} -size 10")
         self.Welcome_Reg.configure(foreground="#000000")
-        self.Welcome_Reg.configure(text='''Welcome''')
+        self.Welcome_Reg.configure(text='''Welcome,''')
 
         self.balance_label = tk.Label(self.User_banking)
         self.balance_label.place(relx=0.058, rely=0.196, height=21, width=70)
@@ -2031,7 +2031,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.balanceamt_label.configure(text="")
 
         self.Bills_Payment_Reg = tk.Label(self.User_banking)
-        self.Bills_Payment_Reg.place(relx=0.029, rely=0.301, height=21, width=100)
+        self.Bills_Payment_Reg.place(relx=0.029, rely=0.301, height=21, width=124)
 
         self.Bills_Payment_Reg.configure(background="#d9d9d9")
         self.Bills_Payment_Reg.configure(disabledforeground="#a3a3a3")
@@ -2041,7 +2041,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
 
         self.Bank_Transfer_Reg = tk.Label(self.User_banking)
         self.Bank_Transfer_Reg.place(relx=0.029, rely=0.402, height=21
-                                     , width=100)
+                                     , width=124)
         self.Bank_Transfer_Reg.configure(background="#d9d9d9")
         self.Bank_Transfer_Reg.configure(disabledforeground="#a3a3a3")
         self.Bank_Transfer_Reg.configure(font="-family {Verdana} -size 10")
@@ -2127,8 +2127,50 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.btn_statement.configure(pady="0")
         self.btn_statement.configure(text='''Statement''')
 
+        self.update_pass = tk.Label(self.User_banking)
+        self.update_pass.place(relx=0.029, rely=0.703, height=21, width=124)
+        self.update_pass.configure(background="#d9d9d9")
+        self.update_pass.configure(disabledforeground="#a3a3a3")
+        self.update_pass.configure(font="-family {Verdana} -size 10")
+        self.update_pass.configure(foreground="#000000")
+        self.update_pass.configure(text='''Update Password''')
+
+        self.btn_uppass = tk.Button(self.User_banking, command=lambda: self.show_frame(self.update_pass))
+        self.btn_uppass.place(relx=0.435, rely=0.703, height=24, width=87)
+        self.btn_uppass.configure(activebackground="#ececec")
+        self.btn_uppass.configure(activeforeground="#000000")
+        self.btn_uppass.configure(background="#808040")
+        self.btn_uppass.configure(disabledforeground="#a3a3a3")
+        self.btn_uppass.configure(font="-family {Verdana} -size 10 -weight bold")
+        self.btn_uppass.configure(foreground="#ffffff")
+        self.btn_uppass.configure(highlightbackground="#d9d9d9")
+        self.btn_uppass.configure(highlightcolor="black")
+        self.btn_uppass.configure(pady="0")
+        self.btn_uppass.configure(text='''Update''')
+
+        self.update_pin = tk.Label(self.User_banking)
+        self.update_pin.place(relx=0.029, rely=0.803, height=21, width=124)
+        self.update_pin.configure(background="#d9d9d9")
+        self.update_pin.configure(disabledforeground="#a3a3a3")
+        self.update_pin.configure(font="-family {Verdana} -size 10")
+        self.update_pin.configure(foreground="#000000")
+        self.update_pin.configure(text='''Update Pin''')
+
+        self.btn_uppin = tk.Button(self.User_banking, command=lambda: self.show_frame(self.update_pin))
+        self.btn_uppin.place(relx=0.435, rely=0.803, height=24, width=87)
+        self.btn_uppin.configure(activebackground="#ececec")
+        self.btn_uppin.configure(activeforeground="#000000")
+        self.btn_uppin.configure(background="#808040")
+        self.btn_uppin.configure(disabledforeground="#a3a3a3")
+        self.btn_uppin.configure(font="-family {Verdana} -size 10 -weight bold")
+        self.btn_uppin.configure(foreground="#ffffff")
+        self.btn_uppin.configure(highlightbackground="#d9d9d9")
+        self.btn_uppin.configure(highlightcolor="black")
+        self.btn_uppin.configure(pady="0")
+        self.btn_uppin.configure(text='''Update''')
+
         self.Back_Button = tk.Button(self.User_banking, command=self.user_logout)
-        self.Back_Button.place(relx=0.319, rely=0.754, height=24, width=87)
+        self.Back_Button.place(relx=0.319, rely=0.92, height=24, width=87)
         self.Back_Button.configure(activebackground="#ececec")
         self.Back_Button.configure(activeforeground="#000000")
         self.Back_Button.configure(background="#804040")
@@ -2141,7 +2183,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.Back_Button.configure(text='''Logout''')
 
         self.user_banking_logo = tk.Label(self.User_banking)
-        self.user_banking_logo.place(relx=0.667, rely=0.854, height=51
+        self.user_banking_logo.place(relx=0.667, rely=0.88, height=51
                                      , width=104)
         self.user_banking_logo.configure(background="#d9d9d9")
         self.user_banking_logo.configure(disabledforeground="#a3a3a3")
@@ -2912,6 +2954,203 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         self.quickAirtime_Amount.configure(font="TkFixedFont")
         self.quickAirtime_Amount.configure(foreground="#000000")
         self.quickAirtime_Amount.configure(insertbackground="black")
+
+        # -----------------------UPDATE PASSWORD FRAME-----------------
+        self.update_pass = tk.Frame(top)
+        self.update_pass.place(relx=0.183, rely=0.042, relheight=0.885
+                               , relwidth=0.575)
+        self.update_pass.configure(relief='groove')
+        self.update_pass.configure(borderwidth="2")
+        self.update_pass.configure(relief="groove")
+        self.update_pass.configure(background="#d9d9d9")
+
+        self.update_pass_logo_Label1 = tk.Label(self.update_pass)
+        self.update_pass_logo_Label1.place(relx=0.029, rely=0.024, height=41
+                                           , width=84)
+        self.update_pass_logo_Label1.configure(background="#d9d9d9")
+        self.update_pass_logo_Label1.configure(disabledforeground="#a3a3a3")
+        self.update_pass_logo_Label1.configure(foreground="#000000")
+        photo_location = os.path.join(prog_location, "Azlogo3.jpg")
+        global _img130
+        _img130 = ImageTk.PhotoImage(file=photo_location)
+        self.update_pass_logo_Label1.configure(image=_img130)
+        self.update_pass_logo_Label1.configure(text='''''')
+
+        self.update_pass_heading_Label1 = tk.Label(self.update_pass)
+        self.update_pass_heading_Label1.place(relx=0.319, rely=0.047, height=31
+                                              , width=214)
+        self.update_pass_heading_Label1.configure(background="#d9d9d9")
+        self.update_pass_heading_Label1.configure(disabledforeground="#a3a3a3")
+        self.update_pass_heading_Label1.configure(font="-family {Verdana} -size 13 -weight bold")
+        self.update_pass_heading_Label1.configure(foreground="#000000")
+        self.update_pass_heading_Label1.configure(text='''UPDATE PASSWORD''')
+
+        self.newpassword_update_Label1 = tk.Label(self.update_pass)
+        self.newpassword_update_Label1.place(relx=0.087, rely=0.282, height=21
+                                             , width=140)
+        self.newpassword_update_Label1.configure(background="#d9d9d9")
+        self.newpassword_update_Label1.configure(disabledforeground="#a3a3a3")
+        self.newpassword_update_Label1.configure(foreground="#000000")
+        self.newpassword_update_Label1.configure(text='''New Password''')
+
+        self.update_new_pass_Entry1 = tk.Entry(self.update_pass,show="*")
+        self.update_new_pass_Entry1.place(relx=0.522, rely=0.282, height=20
+                                          , relwidth=0.388)
+        self.update_new_pass_Entry1.configure(background="white")
+        self.update_new_pass_Entry1.configure(disabledforeground="#a3a3a3")
+        self.update_new_pass_Entry1.configure(font="TkFixedFont")
+        self.update_new_pass_Entry1.configure(foreground="#000000")
+        self.update_new_pass_Entry1.configure(insertbackground="black")
+
+        self.confirm_password_update_Label1_1 = tk.Label(self.update_pass)
+        self.confirm_password_update_Label1_1.place(relx=0.087, rely=0.447
+                                                    , height=21, width=134)
+        self.confirm_password_update_Label1_1.configure(activebackground="#f9f9f9")
+        self.confirm_password_update_Label1_1.configure(activeforeground="black")
+        self.confirm_password_update_Label1_1.configure(background="#d9d9d9")
+        self.confirm_password_update_Label1_1.configure(disabledforeground="#a3a3a3")
+        self.confirm_password_update_Label1_1.configure(foreground="#000000")
+        self.confirm_password_update_Label1_1.configure(highlightbackground="#d9d9d9")
+        self.confirm_password_update_Label1_1.configure(highlightcolor="black")
+        self.confirm_password_update_Label1_1.configure(text='''Confirrm New Password''')
+
+        self.confirm_new_pass_Entry1_1 = tk.Entry(self.update_pass,show="*")
+        self.confirm_new_pass_Entry1_1.place(relx=0.522, rely=0.447, height=20
+                                             , relwidth=0.388)
+        self.confirm_new_pass_Entry1_1.configure(background="white")
+        self.confirm_new_pass_Entry1_1.configure(disabledforeground="#a3a3a3")
+        self.confirm_new_pass_Entry1_1.configure(font="TkFixedFont")
+        self.confirm_new_pass_Entry1_1.configure(foreground="#000000")
+        self.confirm_new_pass_Entry1_1.configure(highlightbackground="#d9d9d9")
+        self.confirm_new_pass_Entry1_1.configure(highlightcolor="black")
+        self.confirm_new_pass_Entry1_1.configure(insertbackground="black")
+        self.confirm_new_pass_Entry1_1.configure(selectbackground="blue")
+        self.confirm_new_pass_Entry1_1.configure(selectforeground="white")
+
+        self.Save_update_pass = tk.Button(self.update_pass, command=lambda: self.updatepass_thread(None))
+        self.Save_update_pass.place(relx=0.406, rely=0.612, height=24, width=67)
+        self.Save_update_pass.configure(activebackground="#ececec")
+        self.Save_update_pass.configure(activeforeground="#000000")
+        self.Save_update_pass.configure(background="#808040")
+        self.Save_update_pass.configure(disabledforeground="#a3a3a3")
+        self.Save_update_pass.configure(font="-family {Verdana} -size 9 -weight bold")
+        self.Save_update_pass.configure(foreground="#ffffff")
+        self.Save_update_pass.configure(highlightbackground="#d9d9d9")
+        self.Save_update_pass.configure(highlightcolor="black")
+        self.Save_update_pass.configure(pady="0")
+        self.Save_update_pass.configure(text='''Save''')
+
+        self.back_update_pass_1 = tk.Button(self.update_pass, command=lambda:self.show_frame(self.User_banking))
+        self.back_update_pass_1.place(relx=0.696, rely=0.612, height=24
+                                      , width=67)
+        self.back_update_pass_1.configure(activebackground="#ececec")
+        self.back_update_pass_1.configure(activeforeground="#000000")
+        self.back_update_pass_1.configure(background="#804040")
+        self.back_update_pass_1.configure(disabledforeground="#a3a3a3")
+        self.back_update_pass_1.configure(font="-family {Verdana} -size 9 -weight bold")
+        self.back_update_pass_1.configure(foreground="#ffffff")
+        self.back_update_pass_1.configure(highlightbackground="#d9d9d9")
+        self.back_update_pass_1.configure(highlightcolor="black")
+        self.back_update_pass_1.configure(pady="0")
+        self.back_update_pass_1.configure(text='''Back''')
+
+        # ----------------------UPDATE PIN FRAME--------------------------
+        self.update_pin = tk.Frame(top)
+        self.update_pin.place(relx=0.183, rely=0.042, relheight=0.885
+                              , relwidth=0.575)
+        self.update_pin.configure(relief='groove')
+        self.update_pin.configure(borderwidth="2")
+        self.update_pin.configure(relief="groove")
+        self.update_pin.configure(background="#d9d9d9")
+
+        self.update_pin_logo_Label1 = tk.Label(self.update_pin)
+        self.update_pin_logo_Label1.place(relx=0.1, rely=0.024, height=51, width=104)
+        self.update_pin_logo_Label1.configure(background="#d9d9d9")
+        self.update_pin_logo_Label1.configure(disabledforeground="#a3a3a3")
+        self.update_pin_logo_Label1.configure(foreground="#000000")
+        photo_location = os.path.join(prog_location, "Azlogo3.jpg")
+        global _img120
+        _img120 = ImageTk.PhotoImage(file=photo_location)
+        self.update_pin_logo_Label1.configure(image=_img120)
+        self.update_pin_logo_Label1.configure(text='''''')
+
+        self.update_pin_heading_Label1 = tk.Label(self.update_pin)
+        self.update_pin_heading_Label1.place(relx=0.319, rely=0.047, height=31
+                                             , width=214)
+        self.update_pin_heading_Label1.configure(background="#d9d9d9")
+        self.update_pin_heading_Label1.configure(disabledforeground="#a3a3a3")
+        self.update_pin_heading_Label1.configure(font="-family {Verdana} -size 13 -weight bold")
+        self.update_pin_heading_Label1.configure(foreground="#000000")
+        self.update_pin_heading_Label1.configure(text='''UPDATE PIN''')
+
+        self.newpin_update_Label1 = tk.Label(self.update_pin)
+        self.newpin_update_Label1.place(relx=0.077, rely=0.282, height=21
+                                        , width=140)
+        self.newpin_update_Label1.configure(background="#d9d9d9")
+        self.newpin_update_Label1.configure(disabledforeground="#a3a3a3")
+        self.newpin_update_Label1.configure(foreground="#000000")
+        self.newpin_update_Label1.configure(text='''New Pin''')
+
+        self.update_new_pin_Entry1 = tk.Entry(self.update_pin,show="*")
+        self.update_new_pin_Entry1.place(relx=0.522, rely=0.282, height=20
+                                         , relwidth=0.388)
+        self.update_new_pin_Entry1.configure(background="white")
+        self.update_new_pin_Entry1.configure(disabledforeground="#a3a3a3")
+        self.update_new_pin_Entry1.configure(font="TkFixedFont")
+        self.update_new_pin_Entry1.configure(foreground="#000000")
+        self.update_new_pin_Entry1.configure(insertbackground="black")
+
+        self.confirm_pin_update_Label1_1 = tk.Label(self.update_pin)
+        self.confirm_pin_update_Label1_1.place(relx=0.077, rely=0.447, height=21
+                                               , width=134)
+        self.confirm_pin_update_Label1_1.configure(activebackground="#f9f9f9")
+        self.confirm_pin_update_Label1_1.configure(activeforeground="black")
+        self.confirm_pin_update_Label1_1.configure(background="#d9d9d9")
+        self.confirm_pin_update_Label1_1.configure(disabledforeground="#a3a3a3")
+        self.confirm_pin_update_Label1_1.configure(foreground="#000000")
+        self.confirm_pin_update_Label1_1.configure(highlightbackground="#d9d9d9")
+        self.confirm_pin_update_Label1_1.configure(highlightcolor="black")
+        self.confirm_pin_update_Label1_1.configure(text='''Confirrm New Pin''')
+
+        self.confirm_new_pin_Entry1_1 = tk.Entry(self.update_pin,show="*")
+        self.confirm_new_pin_Entry1_1.place(relx=0.522, rely=0.447, height=20
+                                            , relwidth=0.388)
+        self.confirm_new_pin_Entry1_1.configure(background="white")
+        self.confirm_new_pin_Entry1_1.configure(disabledforeground="#a3a3a3")
+        self.confirm_new_pin_Entry1_1.configure(font="TkFixedFont")
+        self.confirm_new_pin_Entry1_1.configure(foreground="#000000")
+        self.confirm_new_pin_Entry1_1.configure(highlightbackground="#d9d9d9")
+        self.confirm_new_pin_Entry1_1.configure(highlightcolor="black")
+        self.confirm_new_pin_Entry1_1.configure(insertbackground="black")
+        self.confirm_new_pin_Entry1_1.configure(selectbackground="blue")
+        self.confirm_new_pin_Entry1_1.configure(selectforeground="white")
+
+        self.Save_update_pin = tk.Button(self.update_pin, command=lambda: self.updatepin_thread(None))
+        self.Save_update_pin.place(relx=0.406, rely=0.612, height=24, width=67)
+        self.Save_update_pin.configure(activebackground="#ececec")
+        self.Save_update_pin.configure(activeforeground="#000000")
+        self.Save_update_pin.configure(background="#808040")
+        self.Save_update_pin.configure(disabledforeground="#a3a3a3")
+        self.Save_update_pin.configure(font="-family {Verdana} -size 9 -weight bold")
+        self.Save_update_pin.configure(foreground="#ffffff")
+        self.Save_update_pin.configure(highlightbackground="#d9d9d9")
+        self.Save_update_pin.configure(highlightcolor="black")
+        self.Save_update_pin.configure(pady="0")
+        self.Save_update_pin.configure(text='''Save''')
+
+        self.back_update_pin_1 = tk.Button(self.update_pin, command=lambda:self.show_frame(self.User_banking))
+        self.back_update_pin_1.place(relx=0.696, rely=0.612, height=24, width=67)
+
+        self.back_update_pin_1.configure(activebackground="#ececec")
+        self.back_update_pin_1.configure(activeforeground="#000000")
+        self.back_update_pin_1.configure(background="#804040")
+        self.back_update_pin_1.configure(disabledforeground="#a3a3a3")
+        self.back_update_pin_1.configure(font="-family {Verdana} -size 9 -weight bold")
+        self.back_update_pin_1.configure(foreground="#ffffff")
+        self.back_update_pin_1.configure(highlightbackground="#d9d9d9")
+        self.back_update_pin_1.configure(highlightcolor="black")
+        self.back_update_pin_1.configure(pady="0")
+        self.back_update_pin_1.configure(text='''Back''')
         self.show_frame(self.Welcome_Page)
 
     # ----------------------RAISE FRAME METHOD-------------------------------#
@@ -3188,6 +3427,69 @@ The bank will not be held liable for whatsoever issues that might occur as a res
                 self.info_list.insert(tk.END, f"{i}:{contain[j]}\n")
                 j += 1
 
+    # ---------------UPDATE PASSWORD METHOD--------------------------
+    def update_passmethod(self):
+        submitOk = True
+        my_shelve = shelve.open("usershelf")
+        test = my_shelve.get('username')
+        test = int(test)
+        new_pass = self.update_new_pass_Entry1.get()
+        confirm_pass = self.confirm_new_pass_Entry1_1.get()
+
+        password_pattern = '^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{4,}$'
+        password_result = re.match(password_pattern, new_pass)
+        if not password_result:
+            print("Invalid password")
+            submitOk = False
+            messagebox.showerror("Error",
+                                 "Password must contain at least 1 special character, 1 digit, 1 capital letter and 1 small letter!")
+        elif len(new_pass) < 4:
+            submitOk = False
+            messagebox.showerror("Error", "Password must contain at least 4 characters!")
+
+        elif new_pass != confirm_pass:
+            submitOk = False
+            messagebox.showerror("Error", "Password mismatch!")
+
+        if submitOk is False:
+            messagebox.showerror("Error", "Operation failed!")
+            return False
+        else:
+            self.cursor.execute("UPDATE azbank_regusers SET password='{}' WHERE userid={}".format(new_pass,test))
+            messagebox.showinfo("", "Account password updated successfully!")
+        self.conn.commit()
+
+        # -------------UPDATE PIN METHOD-----------------
+    def update_pinmethod(self):
+            submitOk = True
+            my_shelve = shelve.open("usershelf")
+            test = my_shelve.get('username')
+            test = int(test)
+            new_pin = self.update_new_pin_Entry1.get()
+            confirm_pin = self.confirm_new_pin_Entry1_1.get()
+
+            pin_pattern = "\\d{4}"
+            pin_result = re.match(pin_pattern, new_pin)
+
+            if not pin_result:
+                submitOk = False
+                messagebox.showerror("Error", "Invalid pin")
+
+            elif len(new_pin) > 4:
+                submitOk = False
+                messagebox.showerror("Error", "Pin must be 4 digits!")
+
+            elif new_pin != confirm_pin:
+                submitOk = False
+                messagebox.showerror("Error", "Pin mismatch!")
+
+            if submitOk is False:
+                messagebox.showerror("Error", "Operation failed!")
+                return False
+            else:
+                self.cursor.execute("UPDATE azbank_regusers SET pin='{}' WHERE userid={}".format(new_pin,test))
+                messagebox.showinfo("", "Account pin updated successfully!")
+
     # --------------------------USER LOGOUT METHOD-------------------------
     def user_logout(self):
         if messagebox.askquestion("Sign Out", "Do you want to Log out?") == "yes":
@@ -3326,17 +3628,24 @@ The bank will not be held liable for whatsoever issues that might occur as a res
             writing = self.hp_login_entry.get()
             writing = int(writing)
             print(writing)
-            self.cursor.execute("SELECT accountname from azbank_empusers WHERE accountno={}".format(writing))
+            self.cursor.execute("SELECT firstname from azbank_empusers WHERE accountno={}".format(writing))
             resp = self.cursor.fetchall()
             print(resp)
-            user = str(resp[0])
-            user = user.strip("',()")
+            first = str(resp[0])
+            first = first.strip("',()")
+            self.cursor.execute("SELECT lastname from azbank_empusers WHERE accountno={}".format(writing))
+            reply = self.cursor.fetchall()
+            print(reply)
+            last = str(reply[0])
+            last = last.strip("',()")
+            name = first + " " + last
+            user = name.title()
             self.cursor.execute("SELECT amount from azbank_empusers WHERE accountno={}".format(writing))
             ans = self.cursor.fetchall()
             print(ans)
             bal = str(ans[0])
             bal = bal.strip("\',()")
-            self.balanceamt_label.configure(text=bal)
+            self.balanceamt_label.configure(text=''' ₦{}'''.format(bal))
             self.user_label.configure(text=user)
             self.show_frame(self.User_banking)
             self.conn.commit()
@@ -3384,6 +3693,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
             messagebox.showerror("Error", "Invalid pin")
 
         if submitOk is False:
+            messagebox.showerror("Error", "Invalid transaction")
             return False
         else:
             message = [test, vendor, thisamount, phone, pin, "airtime"]
@@ -3399,9 +3709,11 @@ The bank will not be held liable for whatsoever issues that might occur as a res
                 ans = self.cursor.fetchone()
                 balance = str(ans[0])
                 balance = balance.strip("\',()")
-                self.balanceamt_label.configure(text=balance)
+                self.balanceamt_label.configure(text=''' ₦{}'''.format(balance))
 
                 messagebox.showinfo("", "Transaction successful!")
+            elif answer == "airfail":
+                messagebox.showerror("Error", "Invalid transaction!")
             else:
                 messagebox.showerror("Error", "Invalid pin")
             self.conn.commit()
@@ -3496,6 +3808,8 @@ The bank will not be held liable for whatsoever issues that might occur as a res
                         altnarration, accountno))
 
                 messagebox.showinfo("", "Transaction successful!")
+            elif answer == "quickairfail":
+                messagebox.showerror("Error", "Invalid transaction")
             else:
                 messagebox.showerror("Error", "Invalid pin")
             self.conn.commit()
@@ -3553,6 +3867,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
             submitOk = False
             messagebox.showerror("Error", "Invalid pin")
         if submitOk is False:
+            messagebox.showerror("Error", "Invalid transaction")
             return False
         else:
             message = [intaccountno, vendor, digamount, pin, "quickbills"]
@@ -3566,6 +3881,8 @@ The bank will not be held liable for whatsoever issues that might occur as a res
                         altnarration, accountno))
 
                 messagebox.showinfo("", "Transaction successful!")
+            elif answer == "quickbillsfail":
+                messagebox.showerror("Error", "Invalid transaction")
             else:
                 messagebox.showerror("Error", "Invalid pin")
             # self.cursor.execute("SELECT pin FROM azbank_regusers WHERE userid='{}'".format(intaccountno))
@@ -3619,7 +3936,8 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         if not pin_result:
             submitOk = False
             messagebox.showerror("Error", "Invalid pin")
-        if submitOk is False:
+        if digamount <= 0.0 or submitOk is False:
+            messagebox.showerror("Error", "Invalid transaction")
             return False
         else:
             message = [test, plan, digamount, pin, "bills"]
@@ -3635,8 +3953,10 @@ The bank will not be held liable for whatsoever issues that might occur as a res
                 ans = self.cursor.fetchone()
                 balance = str(ans[0])
                 balance = balance.strip("\',()")
-                self.balanceamt_label.configure(text=balance)
+                self.balanceamt_label.configure(text=''' ₦{}'''.format(balance))
                 messagebox.showinfo("", "Transaction successful!")
+            elif answer == "billsfail":
+                messagebox.showerror("Error", "Invalid transaction")
             else:
                 messagebox.showerror("Error", "Invalid pin")
             # self.cursor.execute("SELECT pin FROM azbank_regusers WHERE userid='{}'".format(test))
@@ -3664,7 +3984,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
     def quicktransfer_method(self):
         submitOk = True
         accountno = self.quickaccnoEntry1.get()
-        intaccountno=int(accountno)
+        intaccountno = int(accountno)
         print(intaccountno)
         beneficiary = self.quickbentEntry2.get()
         print(f'beneficiary is {beneficiary}')
@@ -3723,22 +4043,26 @@ The bank will not be held liable for whatsoever issues that might occur as a res
 
         if intaccountno not in tentlist or int_beneficiary not in tentlist:
             messagebox.showerror("Error", "Invalid account number or beneficiary!")
-            submitOk=False
+            submitOk = False
 
         if submitOk is False:
             return False
         else:
-            message=[accountno,int_beneficiary,float_amount,pin,"quicktransfer"]
+            message = [accountno, int_beneficiary, float_amount, pin, "quicktransfer"]
             self.s.send(str.encode(json.dumps(message)))
-            data=self.s.recv(1024)
+            data = self.s.recv(1024)
             answer = bytes.decode(data)
             print(f"answer is {answer}")
             if answer == "quicktransfersuccess":
                 self.cursor.execute(
-                                "UPDATE azbank_empusers SET narration=CONCAT(narration,'\n{}') WHERE accountno='{}'".format(narration, accountno))
+                    "UPDATE azbank_empusers SET narration=CONCAT(narration,'\n{}') WHERE accountno='{}'".format(
+                        narration, accountno))
                 self.cursor.execute(
-                                "UPDATE azbank_empusers SET narration=CONCAT(narration,'\n{}') WHERE accountno='{}'".format(cred_narr, int_beneficiary))
+                    "UPDATE azbank_empusers SET narration=CONCAT(narration,'\n{}') WHERE accountno='{}'".format(
+                        cred_narr, int_beneficiary))
                 messagebox.showinfo("", "Transaction successful!")
+            elif answer == "quicktransferfail":
+                messagebox.showerror("Error", "Invalid transaction")
             else:
                 messagebox.showerror("Error", "Invalid pin")
             self.conn.commit()
@@ -3799,14 +4123,14 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         narration = narration + " amount:" + amount + " " + "on " + dt_string + "."
 
         self.cursor.execute("SELECT accountno from azbank_empusers")
-        item=self.cursor.fetchall()
-        tent=[]
-        tentlist=[]
+        item = self.cursor.fetchall()
+        tent = []
+        tentlist = []
         for i in item:
-            thing=list(i)
-            tent+=thing
+            thing = list(i)
+            tent += thing
         for j in tent:
-            possess=int(j)
+            possess = int(j)
             tentlist.append(possess)
         print(tentlist)
         amount_pattern = '^[+-]?((\d+(\.\d+)?)|(\.\d+))$'
@@ -3832,7 +4156,7 @@ The bank will not be held liable for whatsoever issues that might occur as a res
 
         if int_beneficiary not in tentlist:
             messagebox.showerror("Error", "Invalid beneficiary!")
-            submitOk=False
+            submitOk = False
 
         if submitOk is False:
             messagebox.showerror("Error", "Invalid response!")
@@ -3854,8 +4178,10 @@ The bank will not be held liable for whatsoever issues that might occur as a res
                 ans = self.cursor.fetchone()
                 balance = str(ans[0])
                 balance = balance.strip("\',()")
-                self.balanceamt_label.configure(text=balance)
+                self.balanceamt_label.configure(text=''' ₦{}'''.format(balance))
                 messagebox.showinfo("", "Transaction successful!")
+            elif answer == "transferfail":
+                messagebox.showerror("Error", "Invalid transaction")
             else:
                 messagebox.showerror("Error", "Invalid pin")
             self.conn.commit()
@@ -3903,6 +4229,22 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         my_shelve = shelve.open("usershelf")
         test = my_shelve.get('username')
         test = int(test)
+        # self.cursor.execute("SELECT accoutno from azbank_empusers")
+        # ans=self.cursor.fetchall()
+        # colist = []
+        # cointlist = [] #the one I'm using
+        # for i in ans:
+        #     thing = list(i)
+        #     colist += thing
+        # for j in colist:
+        #     possess = int(j)
+        #     cointlist.append(possess)
+        # self.cursor.execute("SELECT accoutno from azbank_empusers WHERE accountno={}".format(test))
+        # ans2=self.cursor.fetchone()
+        # ans2 = str(ans2)
+        # ans2 = ans2.strip("\',()")
+        # ans2 = int(ans2)
+        # if ans2 in cointlist:
         self.cursor.execute("SELECT narration from azbank_empusers WHERE accountno={}".format(test))
         reply = self.cursor.fetchall()
         surr = []
@@ -3914,6 +4256,8 @@ The bank will not be held liable for whatsoever issues that might occur as a res
             self.dispinfo_list.insert(tk.END, i)
 
         self.show_frame(self.dispAccount_Info_frame)
+        # else:
+        #     messagebox.showerror("Invalid account number")
         my_shelve.close()
 
     # def close_shelve_user_logout(self):
@@ -3950,9 +4294,6 @@ The bank will not be held liable for whatsoever issues that might occur as a res
             messagebox.showinfo("", "Account Statement successfully saved!")
         except:
             messagebox.showerror("", "Save operation cancelled!")
-
-
-
 
     # ----------------------STAFF LOGIN THREAD-------------------------------#
     def stafflogin_thread(self, event):
@@ -3999,6 +4340,16 @@ The bank will not be held liable for whatsoever issues that might occur as a res
         sa_thread = threading.Thread(target=self.saveas)
         sa_thread.daemon = True
         sa_thread.start()
+
+    def updatepass_thread(self, event):
+        pass_thread = threading.Thread(target=self.update_passmethod)
+        pass_thread.daemon = True
+        pass_thread.start()
+
+    def updatepin_thread(self, event):
+        pin_thread = threading.Thread(target=self.update_pinmethod)
+        pin_thread.daemon = True
+        pin_thread.start()
 
     # --------------CHECK IF CUSTOMER ACCOUNT NO EXISTS IN EMP USERS DATABASE THREAD-----------
     def checkaccount_thread(self, event):

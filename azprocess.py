@@ -185,10 +185,13 @@ class processServer(threading.Thread):
                     result = result.strip("\',()")
                     result = float(result)
                     newamount = result - message[2]
-                    self.cursor.execute("UPDATE azbank_empusers SET amount='{}' WHERE accountno='{}'".format(
-                                        newamount,message[0]))
+                    if newamount<0.0:
+                        self.client.send(str.encode("airfail"))
+                    else:
+                        self.cursor.execute("UPDATE azbank_empusers SET amount='{}' WHERE accountno='{}'".format(
+                                            newamount,message[0]))
 
-                    self.client.send(str.encode("airsuccess"))
+                        self.client.send(str.encode("airsuccess"))
                 else:
                     self.client.send(str.encode("airfail"))
                 self.conn.commit()
@@ -208,10 +211,13 @@ class processServer(threading.Thread):
                     result = result.strip("\',()")
                     result = float(result)
                     newamount = result - message[2]
-                    self.cursor.execute("UPDATE azbank_empusers SET amount='{}' WHERE accountno='{}'".format(
-                                        newamount,message[0]))
+                    if newamount<0.0:
+                        self.client.send(str.encode("quickairfail"))
+                    else:
+                        self.cursor.execute("UPDATE azbank_empusers SET amount='{}' WHERE accountno='{}'".format(
+                                            newamount,message[0]))
 
-                    self.client.send(str.encode("quickairsuccess"))
+                        self.client.send(str.encode("quickairsuccess"))
                 else:
                     self.client.send(str.encode("quickairfail"))
                 self.conn.commit()
@@ -229,8 +235,11 @@ class processServer(threading.Thread):
                     result = result.strip("\',()")
                     result = float(result)
                     newamount = result - message[2]
-                    self.cursor.execute("UPDATE azbank_empusers SET amount={} WHERE accountno='{}'".format(newamount,message[0]))
-                    self.client.send(str.encode("quickbillssuccess"))
+                    if newamount<0.0:
+                        self.client.send(str.encode("quickbillsfail"))
+                    else:
+                        self.cursor.execute("UPDATE azbank_empusers SET amount={} WHERE accountno='{}'".format(newamount,message[0]))
+                        self.client.send(str.encode("quickbillssuccess"))
                 else:
                     self.client.send(str.encode("quickbillsfail"))
                 self.conn.commit()
@@ -248,8 +257,11 @@ class processServer(threading.Thread):
                     result = result.strip("\',()")
                     result = float(result)
                     newamount = result - message[2]
-                    self.cursor.execute("UPDATE azbank_empusers SET amount={} WHERE accountno='{}'".format(newamount,message[0]))
-                    self.client.send(str.encode("billssuccess"))
+                    if newamount<0.0:
+                        self.client.send(str.encode("billsfail"))
+                    else:
+                        self.cursor.execute("UPDATE azbank_empusers SET amount={} WHERE accountno='{}'".format(newamount,message[0]))
+                        self.client.send(str.encode("billssuccess"))
                 else:
                     self.client.send(str.encode("billsfail"))
                 self.conn.commit()
@@ -267,19 +279,21 @@ class processServer(threading.Thread):
                     result = result.strip("\',()")
                     result = float(result)
                     newamount = result - message[2]
+                    if newamount<0.0:
+                        self.client.send(str.encode("quicktransferfail"))
+                    else:
+                        self.cursor.execute("UPDATE azbank_empusers SET amount={} WHERE accountno='{}'".format(newamount, message[0]))
 
-                    self.cursor.execute("UPDATE azbank_empusers SET amount={} WHERE accountno='{}'".format(newamount, message[0]))
-
-                    self.cursor.execute("SELECT amount from azbank_empusers WHERE accountno={}".format(message[1]))
-                    amt_post = self.cursor.fetchall()
-                    amt_post = str(amt_post[0])
-                    amt_post = amt_post.strip("\',()")
-                    amt_post = float(amt_post)
-                    cred_amount = amt_post + message[2]
-                    self.cursor.execute(
-                        "UPDATE azbank_empusers SET amount={} WHERE accountno='{}'".format(
-                            cred_amount,message[1]))
-                    self.client.send(str.encode("quicktransfersuccess"))
+                        self.cursor.execute("SELECT amount from azbank_empusers WHERE accountno={}".format(message[1]))
+                        amt_post = self.cursor.fetchall()
+                        amt_post = str(amt_post[0])
+                        amt_post = amt_post.strip("\',()")
+                        amt_post = float(amt_post)
+                        cred_amount = amt_post + message[2]
+                        self.cursor.execute(
+                            "UPDATE azbank_empusers SET amount={} WHERE accountno='{}'".format(
+                                cred_amount,message[1]))
+                        self.client.send(str.encode("quicktransfersuccess"))
                 else:
                     self.client.send(str.encode("quicktransferfail"))
                 self.conn.commit()
@@ -297,19 +311,21 @@ class processServer(threading.Thread):
                     result = result.strip("\',()")
                     result = float(result)
                     newamount = result - message[2]
+                    if newamount<0.0:
+                        self.client.send(str.encode("transferfail"))
+                    else:
+                        self.cursor.execute("UPDATE azbank_empusers SET amount={} WHERE accountno='{}'".format(newamount, message[0]))
 
-                    self.cursor.execute("UPDATE azbank_empusers SET amount={} WHERE accountno='{}'".format(newamount, message[0]))
-
-                    self.cursor.execute("SELECT amount from azbank_empusers WHERE accountno={}".format(message[1]))
-                    amt_post = self.cursor.fetchall()
-                    amt_post = str(amt_post[0])
-                    amt_post = amt_post.strip("\',()")
-                    amt_post = float(amt_post)
-                    cred_amount = amt_post + message[2]
-                    self.cursor.execute(
-                        "UPDATE azbank_empusers SET amount={} WHERE accountno='{}'".format(
-                            cred_amount,message[1]))
-                    self.client.send(str.encode("transfersuccess"))
+                        self.cursor.execute("SELECT amount from azbank_empusers WHERE accountno={}".format(message[1]))
+                        amt_post = self.cursor.fetchall()
+                        amt_post = str(amt_post[0])
+                        amt_post = amt_post.strip("\',()")
+                        amt_post = float(amt_post)
+                        cred_amount = amt_post + message[2]
+                        self.cursor.execute(
+                            "UPDATE azbank_empusers SET amount={} WHERE accountno='{}'".format(
+                                cred_amount,message[1]))
+                        self.client.send(str.encode("transfersuccess"))
                 else:
                     self.client.send(str.encode("transferfail"))
                 self.conn.commit()

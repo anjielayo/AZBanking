@@ -440,15 +440,13 @@ class Az_Bank:
         self.Disclaimer.configure(highlightbackground="#d9d9d9")
         self.Disclaimer.configure(highlightcolor="black")
         self.Disclaimer.configure(relief="raised")
-        self.Disclaimer.configure(text='''Terms and Condition for AZ Mobile banking APP
+        self.Disclaimer.configure(text='''Terms and Conditions for AZ Mobile banking APP
 
-You should read these terms and conditions before downloading the AZ mobile banking Apps. 
+You should read these terms and conditions before downloading the AZ mobile banking Application. 
 
-I hereby authorize and request Az Bank Nigeria, the provision of mobile application service and the issuance and delivery of the password. In addition to the existing terms and conditions attached to this service. 
+I hereby authorize and request AzBank Nigeria, the provision of mobile application service and the issuance and delivery of the password.  
 
-I understand that my login credentials and authentication devices can be used across all mobile and internet banking applications provided by Az bank, hence thebank will not be liable for electronic transactions on any of its channels that were possible by authorized Az to your login credentials and security devices. 
-
-The bank will not be held liable for whatsoever issues that might occur as a result of installation of this application.''')
+I understand that my login credentials and authentication devices can be used across all mobile and internet banking applications provided by AzBank, hence the bank will not be liable for electronic transactions on any of its channels that were possibly authorized by AzBank to your login credentials and security devices. ''')
         self.Disclaimer.configure(wraplength="300")
 
         # ----------REGISTRATION FRAME FOR TOTALLY NEW USER---------------------------
